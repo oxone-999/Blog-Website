@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<h1>Hello</h1>
+
+<p><%= content %></p>
+
+<% postcomments.forEach(function(content){ %>
+  <h1><%= content.name %></h1>
+  <p><%= content.comment.substring(0,50) + " ..." %>
+  <a href="/post/<%= content._id %>">Read More</a></p>
+<% }); %>
+
+<%- include('partials/footer'); -%>
